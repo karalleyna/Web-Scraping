@@ -1,7 +1,7 @@
 # Web-Crawling
 In this project, the problem has two main parts :
-● Traversing through Bogazici University OBIKAS System and extracting the data related to all departmental courses within input.
-● Processing the data and store it in a way that enables us to create a table in the
+i.Traversing through Bogazici University OBIKAS System and extracting the data related to all departmental courses within input.
+ii. Processing the data and store it in a way that enables us to create a table in the
 desired format.
 General Explanation of Algorithm:
 We take the input and after encoding years and semesters we call the method construct_table. ​We follow this strategy:
