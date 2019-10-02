@@ -226,8 +226,7 @@ def construct_table(year_1,semester_1,year_2,semester_2):
                         lesson_of_semester.add(course_code)
                         total_lessons[course_code] = re.sub("\xa0","",parse_string[index_list[1]]).strip()
 
-                        # ders - yil
-                        # bu dersi hangi dönemlerde aldigimi tutuyorum
+                       
                         if course_code in lesson_semesters:
                             temp_list1 = lesson_semesters[ course_code ]
                             temp_list1.add( temp4+decode_semester )
@@ -237,7 +236,7 @@ def construct_table(year_1,semester_1,year_2,semester_2):
                             temp_list1.add( temp4+decode_semester)
                             lesson_semesters[ course_code ] = temp_list1
 
-                        #bu dersi veren hocaları tutuyorum
+                    
                         if "STAFF" not in parse_string[index_list[2]]:
                             if course_code in lesson_instructors:
                                 temp_list2 = lesson_instructors[ course_code ]
@@ -257,7 +256,7 @@ def construct_table(year_1,semester_1,year_2,semester_2):
         #Determining the number of undergrad and grad courses.
         undergrad_grad = find_undergrad_grad(total_lessons)
 
-        #WHAT'S GOING ON HERE.
+    
         if not "Total Offerings" in fieldnames:
             fieldnames.append("Total Offerings")
             str_fieldnames=re.sub(", ",",",str(fieldnames))
